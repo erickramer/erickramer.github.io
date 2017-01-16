@@ -35,25 +35,25 @@ $('document').ready(function(){
       '_' + random_draw(groups)
   }
 
-   $.get('data/animals.csv', function(data){
+   $.get('animals.csv', function(data){
      animals = data.split('\n').map(function(x){
        return x.replace(/[ \-()]/g, "").toLowerCase();
      })
    })
 
-   $.get('data/biomes.csv', function(data){
+   $.get('biomes.csv', function(data){
      biomes = data.split('\n').map(function(x){
        return x.replace(/[ \-()]/g, "");
      })
    })
 
-   $.get('data/adjectives.csv', function(data){
+   $.get('adjectives.csv', function(data){
      adjectives = data.split('\n').map(function(x){
        return x.replace(/[ \-()]/g, "");
      })
    })
 
-   $.get('data/animal_groups.csv', function(data){
+   $.get('animal_groups.csv', function(data){
      groups = data.split('\n').map(function(x){
        return x.replace(/[ \-()]/g, "");
      })
