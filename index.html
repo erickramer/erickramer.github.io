@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Name generator!</title>
+  <title>Gene Visualization</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -22,12 +22,10 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="skeleton.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <script src="jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script type="text/javascript" src="d3.min.js"></script>
+  <script type="text/javascript" src="d3-tip.js"></script>
+  <script type="text/javascript" src="underscore.min.js"></script>
+  <script type="text/javascript" src="viz.js"></script>
 
 </head>
 <body>
@@ -36,28 +34,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 15%">
-        <h4>BCB Name Generator</h4>
-      </div>
-    </div>
-
-    <form>
-      <div class="row">
-        <div class="six columns">
-          <label for="choice">What do you need a name for?</label>
-          <select class="u-full-width" id="type">
-            <option value="storage">Storage</option>
-            <option value="server">Server</option>
-            <option value="cluster">Cluster</option>
-          </select>
-        </div>
-      </div>
-      <input class="button-primary" type="button" value="Get that name!" id="submit">
-    </form>
-
-    <div class="row">
-      <div class="six columns">
-        <pre><code id="generated_name"></code></pre>
+      <div class="one-full column" style="margin-top: 15%">
+        <h4>Patient Clusters</h4>
+        <button id="code">Disease Code</button>
+        <button id="site">Primary Site</button>
+        <button id="status">Vital Status</button>
+        <button id="days">Days to Death</button>
+        <div id="viz"></div>
       </div>
     </div>
   </div>
